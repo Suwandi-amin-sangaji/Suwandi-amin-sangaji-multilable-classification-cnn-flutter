@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "nama": "Hawar Daun",
+    "jenis": "Penyakit Daun",
+    "gambar": "https://karonewsupdate.wordpress.com/wp-content/uploads/2012/05/hawar.jpg",
+    "deskripsi": "Penyakit ini merupakan salah satu jenis penyakit penyerang tanaman jagung yang sering ditemui di banyak daerah di Indonesia. Penyakit yang disebabkan oleh jamur Helminthosporium turcicum ini menunjukkan gejala awal berupa bercak kecil berbentuk oval yang semakin lama semakin menyebar dan memanjang."
+  },
+  {
+    "id": 2,
+    "nama": "Bercak Daun",
+    "jenis": "Penyakit Daun",
+    "gambar": "https://i0.wp.com/www.kampustani.com/wp-content/uploads/2022/03/penyakit-pada-tanaman-jagung-3.jpg?resize=910%2C465&ssl=1",
+    "deskripsi": "Penyakit ini disebabkan oleh jamur Puccinia polysora, dengan gejala yang ditimbulkan berupa bercak-bercak kecil pada permukaan atas maupun bawah daun. Penyakit ini banyak menyerang tanaman jagung yang dibudidayakan di daerah rendah sampai tinggi dan mampu berkembang dengan baik di musim hujan maupun kemarau."
+  },
+
+  {
+    "id": 3,
+    "nama": "Karatan Daun",
+    "jenis": "Penyakit Daun",
+    "gambar": "https://i0.wp.com/www.kampustani.com/wp-content/uploads/2022/03/penyakit-pada-tanaman-jagung-2.jpg?resize=910%2C465&ssl=1",
+    "deskripsi": "Penyakit ini disebabkan oleh Bipolaris maydis Syn. Gejala yang ditimbulkan berupa munculnya bercak yang berwarna hijau kekuningan atau cokelat kemerahan pada daun. Penyakit ini bisa menyebabkan biji buah jagung rusak bahkan tongkol jagung dapat gugur (terlepas dari pohonnya). Penyakit ini juga sangat mudah menular melalui media angin ataupun percikan air hujan."
+  }
+]
