@@ -99,7 +99,7 @@ class _ScanScreenState extends State<ScanScreen> {
   }
 
   pickImage() async {
-    var image = await picker.getImage(source: ImageSource.camera);
+    final XFile? image = await picker.pickImage(source: ImageSource.camera);
     if (image == null) return;
 
     setState(() {
@@ -110,7 +110,7 @@ class _ScanScreenState extends State<ScanScreen> {
   }
 
   pickGalleryImage() async {
-    var image = await picker.getImage(source: ImageSource.gallery);
+    final XFile? image = await picker.pickImage(source: ImageSource.gallery);
     if (image == null) return;
 
     setState(() {

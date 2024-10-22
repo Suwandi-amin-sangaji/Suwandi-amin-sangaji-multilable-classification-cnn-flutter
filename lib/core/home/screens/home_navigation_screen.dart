@@ -22,8 +22,8 @@ class HomeNavigationScreen extends StatefulWidget {
 class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
   final _information = informasi;
   final mapMenu = {
-    IconConstant.cultivationMenu: "Tips & Trick",
-    IconConstant.quizMenu: "Jenis Penyakit",
+    // IconConstant.cultivationMenu: "Tips & Trick",
+    IconConstant.cultivationMenu: "Jenis Penyakit",
     IconConstant.recipesMenu: "Panduan Aplikasi",
   };
 
@@ -98,64 +98,74 @@ class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
             height: 20,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: List.generate(
-                  mapMenu.length,
-                  (index) => GestureDetector(
-                        onTap: () {
-                          if (mapMenu.values.elementAt(index) ==
-                              "Panduan Aplikasi") {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => OnBoardingScreen()));
-                          } else if (mapMenu.values.elementAt(index) ==
-                              "Jenis Penyakit") {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => CultivationScreen()));
-                          } else {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => PengolahanScreen()));
-                          }
-                        },
-                        child: Container(
-                          width: 60,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 60,
-                                height: 60,
-                                margin: EdgeInsets.only(bottom: 10),
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(8),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: ColorConstant.primaryColor
-                                            .withOpacity(0.1),
-                                        blurRadius: 10,
-                                        offset: Offset(0, 3),
-                                      ),
-                                    ]),
-                                child: Image(
-                                    width: 32,
-                                    height: 32,
-                                    image: Svg(mapMenu.keys.elementAt(index))),
-                              ),
-                              Text(
-                                mapMenu.values.elementAt(index),
-                                maxLines: 2,
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontSize: 13, fontWeight: FontWeight.w500),
-                              )
-                            ],
-                          ),
+            padding: const EdgeInsets.symmetric(horizontal: 40),
+            child: GridView.builder(
+              shrinkWrap: true,
+              physics:
+                  NeverScrollableScrollPhysics(), // Mencegah scroll jika ada di dalam SingleChildScrollView
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2, // Dua kolom
+                mainAxisSpacing: 20, // Jarak vertikal antara item
+                crossAxisSpacing: 20, // Jarak horizontal antara item
+                childAspectRatio:
+                    1.5, // Menjaga rasio lebar dan tinggi agar item proporsional
+              ),
+              itemCount: mapMenu.length,
+              itemBuilder: (context, index) => GestureDetector(
+                onTap: () {
+                  if (mapMenu.values.elementAt(index) == "Panduan Aplikasi") {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => OnBoardingScreen()));
+                  } else if (mapMenu.values.elementAt(index) ==
+                      "Jenis Penyakit") {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => CultivationScreen()));
+                  } else {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => PengolahanScreen()));
+                  }
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(8),
+                    boxShadow: [
+                      BoxShadow(
+                        color: ColorConstant.primaryColor.withOpacity(0.1),
+                        blurRadius: 10,
+                        offset: Offset(0, 3),
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 60,
+                        height: 60,
+                        margin: EdgeInsets.only(bottom: 10),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(8),
                         ),
-                      )),
+                        child: Image(
+                          width: 32,
+                          height: 32,
+                          image: Svg(mapMenu.keys.elementAt(index)),
+                        ),
+                      ),
+                      Text(
+                        mapMenu.values.elementAt(index),
+                        maxLines: 2,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: 13, fontWeight: FontWeight.w500),
+                      )
+                    ],
+                  ),
+                ),
+              ),
             ),
           ),
           SizedBox(

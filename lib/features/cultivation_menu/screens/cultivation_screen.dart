@@ -28,7 +28,7 @@ class _CultivationScreenState extends State<CultivationScreen> {
         automaticallyImplyLeading: false,
         leadingWidth: 30,
         title: const Text(
-          "Sampah B3 Aerosol",
+          "Jenis Penyakit daun Jagung",
           style: TextStyle(color: Colors.black),
         ),
         elevation: 1.5,
