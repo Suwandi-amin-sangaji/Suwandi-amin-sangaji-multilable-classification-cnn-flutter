@@ -12,7 +12,7 @@ PODS:
   - TensorFlowLiteC (2.13.0):
     - TensorFlowLiteC/Core (= 2.13.0)
   - TensorFlowLiteC/Core (2.13.0)
-  - tflite (1.1.2):
+  - tflite_v2 (1.0.0):
     - Flutter
     - TensorFlowLiteC
   - webview_flutter_wkwebview (0.0.1):
@@ -24,7 +24,7 @@ DEPENDENCIES:
   - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - share_plus (from `.symlinks/plugins/share_plus/ios`)
-  - tflite (from `.symlinks/plugins/tflite/ios`)
+  - tflite_v2 (from `.symlinks/plugins/tflite_v2/ios`)
   - webview_flutter_wkwebview (from `.symlinks/plugins/webview_flutter_wkwebview/ios`)
 
 SPEC REPOS:
